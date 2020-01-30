@@ -7,7 +7,7 @@ export const Top = ({ title }) => {
   return (
     <div className="top">
       <Link to={`/`} className="link">
-        <span style={{color:'white'}}>{title}</span>
+        <h1 className='title'>{title}</h1>
       </Link>
     </div>
   )

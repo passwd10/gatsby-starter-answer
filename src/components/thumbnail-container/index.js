@@ -7,24 +7,24 @@ export const ThumbnailContainer = ({ countPosts, posts, category }) => {
 
   return (
     <div>
-      <h4>{countPosts} Posts</h4>
+      <h4 className='countPost'>{countPosts} Posts</h4>
       {posts
         .filter(({ node }) =>
           category === 'All' ? node.frontmatter.tag
-          : node.frontmatter.tag.indexOf(category) !== -1)
+            : node.frontmatter.tag.indexOf(category) !== -1)
         .map(({ node }) => (
-          <div key={node.id}>
-            <Link to={node.fields.slug}>
-              <div>
+          <div key={node.id} className='thumbnail'>
+            <div>
+              <Link to={node.fields.slug}>
                 <span className='title'>
                   {node.frontmatter.title}{" "}
                 </span>
-                <span className='date'>
-                  📆 {node.frontmatter.date}
-                </span>
-              </div>
-              <p>{node.excerpt}</p>
-            </Link>
+              </Link>
+              <span className='date'>
+                📆 {node.frontmatter.date}
+              </span>
+            </div>
+            <p className='excerpt'>{node.excerpt}</p>
           </div>
         ))}
     </div>

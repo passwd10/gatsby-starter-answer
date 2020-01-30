@@ -5,6 +5,7 @@ import Bio from '../components/bio'
 import DisqusTemplate from '../components/DisqusTemplate'
 import PostContent from '../components/post-content'
 import PostTitle from '../components/post-title'
+import PostDate from '../components/post-date'
 
 export default ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -15,6 +16,7 @@ export default ({ data, pageContext }) => {
   return (
     <Layout title={title}>
       <PostTitle title={post.frontmatter.title}/>
+      <PostDate date={post.frontmatter.date}/>
       <PostContent post={post.html} />
       <p>-----------------</p>
       <Bio />
@@ -33,6 +35,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
       }
       id
     }
@@ -41,7 +44,6 @@ export const query = graphql`
         title
         siteUrl
         comment {
-          utterances
           disqusShortName
         }
       }

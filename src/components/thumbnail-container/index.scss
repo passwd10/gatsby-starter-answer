@@ -1,9 +1,32 @@
+@import '../../styles/variables.scss';
+
 .title {
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 600;
+  letter-spacing: -0.5px;
+  color: $main-color;
 }
 
 .date {
   float: right;
   padding-top: 10px;
+  letter-spacing: -0.5px;
+}
+
+.excerpt {
+  color: #8f8e8e;
+  margin: 0 0 13px;
+  letter-spacing: -1px;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+.thumbnail {
+  margin: 0 0 30px;
+}
+
+.countPost {
+  text-align: center;
+  font-weight: 400;
+  margin: -5px 0 0;
 }

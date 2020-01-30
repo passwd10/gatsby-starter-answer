@@ -1,11 +1,11 @@
+@import '../../styles/variables.scss';
+
 .blog-title {
-  padding-bottom: 10px;
   background-color: transparent;
 }
 
 .title-link {
-  font-size: 48px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  text-decoration: none;
+  letter-spacing: -3px;
+  color: $main-color;
+  opacity: 0.95;
 }

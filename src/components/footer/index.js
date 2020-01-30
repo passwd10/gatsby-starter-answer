@@ -8,7 +8,7 @@ export const Footer = () => {
       © 2020 <a href="https://github.com/passwd10">ParkAnswer</a>, Built with{' '}
       <a href="https://github.com/">
         Gatsby-Find-Answer
-    </a>
+      </a>
     </footer>
   )
 }

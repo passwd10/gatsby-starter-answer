@@ -1,9 +1,12 @@
-@import '../../styles/common-vars.scss';
+@import '../../styles/variables.scss';
 
 .footer {
   position: relative;
   text-align: center;
   width: 100%;
   height: 60px;
-  background: white;
+  background: transparent;
+  a {
+      color: $light-link-color;
+  }
 }

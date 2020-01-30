@@ -26,9 +26,9 @@ export const Bio = () => {
               alt="Your Profile" />
             <div className='description'>
               <Link to='/about'>
-                <h2 className='author'>
+                <h3 className='author'>
                   {author}
-                </h2>
+                </h3>
               </Link>  
               <p className='intro'>
                 {introduction}
@@ -40,6 +40,7 @@ export const Bio = () => {
                     icon={['fab', v.icon]}
                     style={{width: '23px', marginRight:'10px'}}
                     fixedWidth
+                    className='icon'
                   />
                 </a>
               )}

@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .user {
   display: flex;
   align-items: center;
@@ -19,13 +21,22 @@
   flex: 1;
   margin-left: 18px;
   padding: 12px;
+  font-size: 17px;
+  color: #666565;
 }
 
 .author {
-  margin: 0 0 12px 0;
+  margin: 0 0 5px 0;
   padding: 0;
+  color: $main-color;
+  opacity: 0.9;
+  letter-spacing: -0.5px;
 }
 
 .intro {
-  margin: 0;
+  margin-bottom: 15px;
+}
+
+.icon {
+  color: $main-color;
 }

@@ -7,7 +7,8 @@ import './index.scss'
 export const Tag = ({ tags, selectCategory }) => {
   return (
     <ul role='menu'>
-      <Item title={'All'} selectCategory={selectCategory}/>
+      <h3 className='tag'>Tags🔖</h3>
+      <Item title={'All'} selectCategory={selectCategory} />
       {tags.map((title, id) =>
         <Item
           key={id}

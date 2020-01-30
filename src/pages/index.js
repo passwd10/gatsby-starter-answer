@@ -26,9 +26,6 @@ export default ({ data }) => {
     <div className='home'>
       <Layout title={'HOME'}>
         <Header title={title} />
-
-        <h1>Tags🔖</h1>
-
         <Tag
           tags={tags}
           selectCategory={selectCategory}
