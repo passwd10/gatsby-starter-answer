@@ -6,7 +6,7 @@ tag: ['post', 'linux']
 
 캐시메모리를 비워주는 방법은 간단합니다.
 
-```bash
+``` javascript
 crontab -e
 ```
 

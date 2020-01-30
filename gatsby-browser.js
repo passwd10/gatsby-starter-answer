@@ -1,1 +1,1 @@
-import './src/styles/global.css'
+require('./src/styles/code.scss')

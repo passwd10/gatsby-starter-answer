@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby'
-import Container from '../components/container';
 import Layout from '../components/layout';
 
 export default ({ data }) => {
@@ -8,10 +7,8 @@ export default ({ data }) => {
 
   return (
     <Layout title={title}>
-      <Container>
         <h1>About CSS Modules</h1>
         <p>CSS Modules are cool</p>
-      </Container>
     </Layout>
   )
 }
