@@ -46,7 +46,7 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            date(formatString: "YYYY-MM-DD")
+            date(formatString: "MMMM DD, YYYY")
             title
             tag
           }

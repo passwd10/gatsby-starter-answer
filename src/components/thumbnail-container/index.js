@@ -24,10 +24,10 @@ export const ThumbnailContainer = ({ posts, category }) => {
               {node.excerpt}
             </p>
             <span className='postDate'>
-              📆 {node.frontmatter.date}
+              {node.frontmatter.date}
             </span>
             <span className='postTag'>
-              🔖 {node.frontmatter.tag.map(v => v+' ')}
+              {node.frontmatter.tag.map(v => ' #' + v)}
             </span>
           </div>
         ))}
