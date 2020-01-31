@@ -6,7 +6,7 @@
 
  code[class*="language-"],
  pre[class*="language-"] {
-   color: #ccc;
+   color: #FFFFFF;
    background: none;
    font-family:  Ubuntu, Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
    font-size: 1em;
@@ -25,17 +25,20 @@
    -webkit-hyphens: none;
    -moz-hyphens: none;
    -ms-hyphens: none;
-   hyphens: none;
- 
+   hyphens: none; 
  }
- 
+
+ div.gatsby-highlight {
+   background: rgb(38, 50, 56);
+ }
+
  /* Code blocks */
  pre[class*="language-"] {
-   padding: 1em;
+   padding: 0.5em;
    margin: .5em 0;
    overflow: auto;
  }
-  
+
  /* Inline code */
  :not(pre) > code[class*="language-"] {
    padding: .1em;

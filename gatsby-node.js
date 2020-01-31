@@ -25,18 +25,29 @@ exports.createPages = async ({ graphql, actions }) => {
             fields {
               slug
             }
+            frontmatter {
+              title
+              tag
+            }
           }
         }
       }
     } 
   `)
   
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const posts = result.data.allMarkdownRemark.edges
+
+  posts.forEach(({ node }, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+   
     createPage({
       path: node.fields.slug,
       component: blogPostTemplate,
       context: {
         slug: node.fields.slug,
+        previous,
+        next,
       }
     })
   })

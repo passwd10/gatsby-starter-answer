@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.navigator {
+  margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  background: #355a85;
+  border-radius: 30px;
+  max-width: 100%;
+
+  span {
+    display: inline-block;
+    max-width: 50%;
+    min-width: 50%;
+    text-align: center;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    height: 70px;
+    line-height: 70px;
+  }
+
+  a {
+    margin: auto;
+    padding: 16px 8px 16px 8px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  a:hover {
+    color : $link-hover-color
+  }
+}

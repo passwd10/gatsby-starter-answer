@@ -25,12 +25,12 @@ export const Bio = () => {
               className='profile'
               alt="Your Profile"
               style={{borderRadius: `20%`}} />
-            <div className='description'>
+            <div className='description'>                    
               <Link to='/about'>
                 <h3 className='author'>
                   {author}
                 </h3>
-              </Link>  
+              </Link>
               <p className='intro'>
                 {introduction}
               </p>

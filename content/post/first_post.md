@@ -10,7 +10,7 @@ tag: ['post', 'linux']
 crontab -e
 ```
 
-crontab을 열어줍니다.
+`crontab`을 열어줍니다.
 
 ![구동과정](./images/구동과정.png)
 

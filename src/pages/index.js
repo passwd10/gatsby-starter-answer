@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import ThumbnailContainer from '../components/thumbnail-container'
 import Category from '../components/category'
-import Footer from '../components/footer'
+import CheckContainer from '../components/check-container'
 
 export default ({ data }) => {
   const initialCategory = 'All'
@@ -22,20 +22,20 @@ export default ({ data }) => {
   }
 
   return (
-    <div className='home'>
+    <>
       <Layout>
         <Header title={title} />
-        <Category
-          tags={tags}
-          selectCategory={selectCategory}
-        />
+        {/* <CheckContainer /> */}
         <ThumbnailContainer
           posts={posts}
           category={category}
         />
       </Layout>
-      <Footer />
-    </div>
+      <Category
+        tags={tags}
+        selectCategory={selectCategory}
+      />
+    </>
   )
 }
 

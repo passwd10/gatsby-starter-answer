@@ -7,6 +7,7 @@ import PostContent from '../components/post-content'
 import PostTitle from '../components/post-title'
 import PostDate from '../components/post-date'
 import Horizontal from '../components/horizontal'
+import PostNavigator from '../components/post-navigator'
 
 export default ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -21,6 +22,7 @@ export default ({ data, pageContext }) => {
       <PostContent post={post.html} />
       <Horizontal />
       <Bio />
+      <PostNavigator pageContext={pageContext} />
       <DisqusTemplate
         siteUrl={siteUrl}
         title={post.frontmatter.title}

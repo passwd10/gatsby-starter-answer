@@ -10,7 +10,7 @@ export const ThumbnailContainer = ({ posts, category }) => {
               : node.frontmatter.tag.indexOf(category) !== -1)
 
   return (
-    <div>
+    <div className='container'>
       <h4 className='countPost'>{posts.length} Posts</h4>
       {posts
         .map(({ node }) => (

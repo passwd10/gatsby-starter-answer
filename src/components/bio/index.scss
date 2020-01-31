@@ -23,22 +23,26 @@
   margin-left: 18px;
   font-size: 17px;
   color: #666565;
-}
 
-.author {
-  margin: 0 0 3px 0;
-  padding: 0;
-  color: $main-color;
-  opacity: 0.7;
-  font-weight: 400;
-  letter-spacing: -0.5px;
-}
+  .author {
+    margin: 0 0 3px 0;
+    padding: 0;
+    color: $main-color;
+    opacity: 0.7;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+  }
 
-.intro {
-  margin-bottom: 15px;
-  font-weight: 100;
-}
+  .author:hover {
+    color: $link-hover-color;
+  }
 
-.icon {
-  color: $main-color;
+  .intro {
+    margin-bottom: 15px;
+    font-weight: 100;
+  }
+
+  .icon {
+    color: $main-color;
+  }
 }
