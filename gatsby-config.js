@@ -34,33 +34,16 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-emojis',
-            options: {
-              active: true,
-              class: 'emoji-icon',
-              escapeCharacter: '#', // (default: '')
-              size: 64,
-              styles: {
-                display: 'inline',
-                margin: '0',
-                'margin-top': '1px',
-                position: 'relative',
-                top: '5px',
-                width: '25px'
-              }
-            }
-          },
-          {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              classPrefix: "language-",
               inlineCodeMarker: '%',
+              showLineNumbers: true,
             },
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 620,
               linkImagesToOriginal: false,
             },
           },
@@ -77,13 +60,14 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          `gatsby-remark-smartypants`,
+          `gatsby-remark-emojis`,
         ],
       },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-lodash`,
   ]
 }

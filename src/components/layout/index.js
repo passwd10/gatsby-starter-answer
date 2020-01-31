@@ -1,6 +1,8 @@
 import React from 'react'
 import Top from '../top'
 
+import './index.scss'
+
 export const Layout = ({ children, title }) => (
   <>
     <Top title={title} />

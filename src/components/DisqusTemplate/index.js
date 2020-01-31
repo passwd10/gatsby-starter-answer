@@ -1,5 +1,5 @@
 import React from 'react'
-import { Disqus, CommentCount } from 'gatsby-plugin-disqus'
+import { Disqus } from 'gatsby-plugin-disqus'
 
 const DisqusTemplate = ({siteUrl, slug, identifier, title}) => {
   let disqusConfig = {
@@ -9,10 +9,7 @@ const DisqusTemplate = ({siteUrl, slug, identifier, title}) => {
   }
 
   return (
-    <>
-      <CommentCount config={disqusConfig} placeholder={'...'} />
       <Disqus config={disqusConfig} />
-    </>
   )
 }
 

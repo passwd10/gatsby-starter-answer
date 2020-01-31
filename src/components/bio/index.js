@@ -23,7 +23,8 @@ export const Bio = () => {
           <div className='user'>
             <img src={profile}
               className='profile'
-              alt="Your Profile" />
+              alt="Your Profile"
+              style={{borderRadius: `20%`}} />
             <div className='description'>
               <Link to='/about'>
                 <h3 className='author'>

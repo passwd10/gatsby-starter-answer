@@ -12,19 +12,23 @@ crontab -e
 
 crontab을 열어줍니다.
 
+![구동과정](./images/구동과정.png)
+
 특정한 시간에 또는 특정 시간 마다 어떤 작업을 자동으로 수행하게 해주고 싶을 때 사용하는 명령어가 cron입니다.
 cron은 특정한 시간에 특정한 작업을 수행하게 해주는 스케줄링 역할을 하는데 이 cron작업을 설정하는 파일을 crontab파일이라고 합니다.
 
 매 시간마다 캐시메모리를 비워주려면
 
 ```bash
-0 **** sync && echo 3 > /proc/sys/vm/drop_caches # 매 시간 캐시 비우기
+0 **** sync && echo 3 > /proc/sys/vm/drop_caches
+# 매 시간 캐시 비우기
 ```
 
 지정한 시간에 캐시메모리를 비워주려면
 
 ```bash
-40 3 *** sync && echo 3 > /proc/sys/vm/drop_caches # 매일 오전 3시 40분에 캐시 비우기
+40 3 *** sync && echo 3 > /proc/sys/vm/drop_caches
+# 매일 오전 3시 40분에 캐시 비우기
 ```
 
 crontab 안에 작성해주면 됩니다.

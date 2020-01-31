@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .item {
   display: inline;
 }
@@ -8,4 +10,9 @@
   border: transparent;
   font-size: 20px;
   cursor: pointer;
+}
+
+.tag {
+  font-size: 35px;
+  text-align: center;
 }

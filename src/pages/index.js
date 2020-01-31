@@ -5,7 +5,7 @@ import _ from 'lodash'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import ThumbnailContainer from '../components/thumbnail-container'
-import Tag from '../components/tag'
+import Category from '../components/category'
 import Footer from '../components/footer'
 
 export default ({ data }) => {
@@ -13,7 +13,6 @@ export default ({ data }) => {
   const [category, setCategory] = useState(initialCategory)
 
   const posts = data.allMarkdownRemark.edges
-  const countPosts = data.allMarkdownRemark.totalCount
   const title = data.site.siteMetadata.title
   const arr = []
   const tags = _.uniq(arr.concat(...posts.map(({ node }) => node.frontmatter.tag)))
@@ -24,15 +23,14 @@ export default ({ data }) => {
 
   return (
     <div className='home'>
-      <Layout title={'HOME'}>
+      <Layout>
         <Header title={title} />
-        <Tag
+        <Category
           tags={tags}
           selectCategory={selectCategory}
         />
         <ThumbnailContainer
           posts={posts}
-          countPosts={countPosts}
           category={category}
         />
       </Layout>
@@ -44,7 +42,6 @@ export default ({ data }) => {
 export const query = graphql`
   query MyQuery {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      totalCount
       edges {
         node {
           id
@@ -56,7 +53,7 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt
+          excerpt(pruneLength: 200)
         }
       }
     }
