@@ -5,8 +5,8 @@ import './index.scss'
 export const CheckConatainer = () => {
   return (
     <div className='check-box'>
-      <p>2019년에 작성한 TIL 개수 : 40 개</p>
-      <p>2020년에 작성한 TIL 개수 : 20 개</p>
+      <p>TIL 총 40 개 작성!</p>
+      <p>2020년 TIL 20 개 작성!</p>
     </div>
   );
 }

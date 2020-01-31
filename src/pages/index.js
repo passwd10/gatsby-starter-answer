@@ -22,20 +22,18 @@ export default ({ data }) => {
   }
 
   return (
-    <>
       <Layout>
         <Header title={title} />
-        {/* <CheckContainer /> */}
+        <CheckContainer />
+        <Category
+          tags={tags}
+          selectCategory={selectCategory}
+        />
         <ThumbnailContainer
           posts={posts}
           category={category}
         />
       </Layout>
-      <Category
-        tags={tags}
-        selectCategory={selectCategory}
-      />
-    </>
   )
 }
 
