@@ -16,6 +16,9 @@ export default ({ data }) => {
   const title = data.site.siteMetadata.title
   const arr = []
   const tags = _.uniq(arr.concat(...posts.map(({ node }) => node.frontmatter.tag)))
+  const content = posts.map(({node}) => node.htmlAst.children).map(v => console.log(v))
+
+  console.log('content', content)
 
   const selectCategory = (tag) => {
     setCategory(tag)
@@ -24,7 +27,7 @@ export default ({ data }) => {
   return (
       <Layout>
         <Header title={title} />
-        <CheckContainer />
+        <CheckContainer content={content}/>
         <Category
           tags={tags}
           selectCategory={selectCategory}
@@ -52,6 +55,7 @@ export const query = graphql`
             slug
           }
           excerpt(pruneLength: 200)
+          htmlAst
         }
       }
     }

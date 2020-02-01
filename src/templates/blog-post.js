@@ -33,7 +33,7 @@ export default ({ data, pageContext }) => {
   )
 }
 export const query = graphql`
-  query  BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
