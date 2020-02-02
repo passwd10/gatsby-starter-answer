@@ -10,7 +10,7 @@ export default ({ content, planTitle, showPlan }) => {
       <Link to='/plan'>
         <h3 className='plan-title'>{planTitle}</h3>
       </Link>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <ul dangerouslySetInnerHTML={{ __html: content }} />
     </div>)
   )
 }

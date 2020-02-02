@@ -21,37 +21,36 @@ export default ({ data }) => {
   const regExDel = /(<li><del>)(.*?)(<\/del><\/li>)/g
 
   const content = posts
-                  .filter(({node}) => node.frontmatter.tag)
-                  .filter(({node}) => !node.frontmatter.tag.indexOf('TIL'))
-                  .map(v => v.node.html
-                              .split(planTitle)
-                              .slice(1)[0]
-                              .split(regExUl)[1]
-                              .replace(regExDel, ''))
-                  .join('')
-                  
-  console.log(content)
+    .filter(({ node }) => node.frontmatter.tag)
+    .filter(({ node }) => !node.frontmatter.tag.indexOf('TIL'))
+    .map(v => v.node.html
+      .split(planTitle)
+      .slice(1)[0]
+      .split(regExUl)[1]
+      .replace(regExDel, ''))
+    .join('')
+
   const selectCategory = (tag) => {
     setCategory(tag)
   }
 
   return (
-      <Layout>
-        <Header title={title} />
-        <PlanContainer 
-          content={content}
-          planTitle={planTitle}
-          showPlan={showPlan}
-        />
-        <Category
-          tags={tags}
-          selectCategory={selectCategory}
-        />
-        <ThumbnailContainer
-          posts={posts}
-          category={category}
-        />
-      </Layout>
+    <Layout>
+      <Header title={title} />
+      <PlanContainer
+        content={content}
+        planTitle={planTitle}
+        showPlan={showPlan}
+      />
+      <Category
+        tags={tags}
+        selectCategory={selectCategory}
+      />
+      <ThumbnailContainer
+        posts={posts}
+        category={category}
+      />
+    </Layout>
   )
 }
 

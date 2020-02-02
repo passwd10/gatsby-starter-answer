@@ -4,7 +4,6 @@ module.exports = {
   author: `Park Answer`,
   introduction: `Welcome! This is the Dev Blog`,
   siteUrl: `http://parkanswer.surge.sh/`, // Your blog site url
-  profile: `/profile.jpg`,
   social: [
     {
       icon: `github`,

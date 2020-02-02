@@ -2,6 +2,8 @@ import React from 'react';
 import { graphql } from 'gatsby'
 import Layout from '../components/layout';
 
+import '../styles/plan.scss'
+
 export default ({ data }) => {
   const { title, planTitle, showPlan } = data.site.siteMetadata
 
@@ -31,12 +33,15 @@ export default ({ data }) => {
     .join('').split(',').join('')
 
   return (
-    <Layout title={title}>
-      <h2>{planTitle}</h2>
-      <div dangerouslySetInnerHTML={{ __html: todoList }} />
-      <h2>Completed List</h2>
-      <div dangerouslySetInnerHTML={{ __html: completedList }} />
-    </Layout>
+    <div className='plan'>
+      <Layout title={title}>
+        <h1 className='plan-title'>{planTitle}</h1>
+        <h2 className='todo'>Todo List</h2>
+        <ul dangerouslySetInnerHTML={{ __html: todoList }} />
+        <h2 className='completed'>Completed List</h2>
+        <ul dangerouslySetInnerHTML={{ __html: completedList }} />
+      </Layout>
+    </div>
   )
 }
 

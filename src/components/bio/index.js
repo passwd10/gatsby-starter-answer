@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import Image from 'gatsby-image'
 
 import './index.scss';
 
@@ -16,15 +17,17 @@ export const Bio = () => {
     <StaticQuery
       query={bioQuery}
       render={data => {
-        const { profile, author, introduction, social }
+        const { author, introduction, social }
           = data.site.siteMetadata
 
         return (
           <div className='user'>
-            <img src={profile}
-              className='profile'
-              alt="Your Profile"
-              style={{borderRadius: `20%`}} />
+            <Image
+                className="profile"
+                fixed={data.profile.childImageSharp.fixed}
+                alt="Your Profile"
+                style={{borderRadius: `20%`}}
+             />             
             <div className='description'>                    
               <Link to='/about'>
                 <h3 className='author'>
@@ -56,9 +59,15 @@ export const Bio = () => {
 
 export const bioQuery = graphql`
   query Bioquery {
+    profile: file(absolutePath: {regex: "/profile.png/"}) {
+      childImageSharp {
+        fixed(width: 90, height: 90) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
     site {
       siteMetadata {
-        profile
         author
         introduction
         social {
