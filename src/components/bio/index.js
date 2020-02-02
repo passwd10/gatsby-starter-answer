@@ -26,7 +26,7 @@ export const Bio = () => {
                 className="profile"
                 fixed={data.profile.childImageSharp.fixed}
                 alt="Your Profile"
-                style={{borderRadius: `20%`}}
+                style={{borderRadius: `100%`}}
              />             
             <div className='description'>                    
               <Link to='/about'>

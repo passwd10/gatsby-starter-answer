@@ -14,7 +14,7 @@ module.exports = {
       url: `https://inseo9494@gmail.com`
     }
   ],
-  icon: `content/assets/felog.png`, // Add your favicon
+  icon: `content/assets/icon.png`,
   keywords: [`blog`],
   planTitle: `Future Action Plan`,
   showPlan: true,

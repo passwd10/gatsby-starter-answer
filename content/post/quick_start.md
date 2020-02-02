@@ -1,10 +1,10 @@
 ---
-title: 'Quick Start'
+title: "Quick Start"
 date: 2020-01-27
 tag: ['post']
 ---
 
-# Getting Started 😎
+# Getting Started
 
 ## 2
 

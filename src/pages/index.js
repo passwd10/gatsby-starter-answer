@@ -58,7 +58,6 @@ export const query = graphql`
   query MyQuery {
     site {
       siteMetadata {
-        profile
         title
         author
         introduction
