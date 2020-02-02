@@ -67,6 +67,18 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+              name: metaConfig.title,
+              short_name: metaConfig.title,
+              start_url: `/`,
+              background_color: `#ffffff`,
+              theme_color: "#6b37bf",
+              display: "standalone",
+              icon: metaConfig.icon,
+            },
+          },
           `gatsby-remark-smartypants`,
           `gatsby-remark-emojis`,
         ],
@@ -76,5 +88,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
+    'gatsby-plugin-offline',
+    `gatsby-plugin-react-helmet`,
   ]
 }
