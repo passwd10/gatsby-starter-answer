@@ -6,20 +6,31 @@ import Layout from '../components/layout'
 import Header from '../components/header'
 import ThumbnailContainer from '../components/thumbnail-container'
 import Category from '../components/category'
-import CheckContainer from '../components/check-container'
+import PlanContainer from '../components/plan-container'
 
 export default ({ data }) => {
   const initialCategory = 'All'
   const [category, setCategory] = useState(initialCategory)
 
   const posts = data.allMarkdownRemark.edges
-  const title = data.site.siteMetadata.title
+  const { title, planTitle, showPlan } = data.site.siteMetadata
   const arr = []
   const tags = _.uniq(arr.concat(...posts.map(({ node }) => node.frontmatter.tag)))
-  const content = posts.map(({node}) => node.htmlAst.children).map(v => console.log(v))
 
-  console.log('content', content)
+  const regExUl = /<ul>|<\/ul>/g
+  const regExDel = /(<li><del>)(.*?)(<\/del><\/li>)/g
 
+  const content = posts
+                  .filter(({node}) => node.frontmatter.tag)
+                  .filter(({node}) => !node.frontmatter.tag.indexOf('TIL'))
+                  .map(v => v.node.html
+                              .split(planTitle)
+                              .slice(1)[0]
+                              .split(regExUl)[1]
+                              .replace(regExDel, ''))
+                  .join('')
+                  
+  console.log(content)
   const selectCategory = (tag) => {
     setCategory(tag)
   }
@@ -27,7 +38,11 @@ export default ({ data }) => {
   return (
       <Layout>
         <Header title={title} />
-        <CheckContainer content={content}/>
+        <PlanContainer 
+          content={content}
+          planTitle={planTitle}
+          showPlan={showPlan}
+        />
         <Category
           tags={tags}
           selectCategory={selectCategory}
@@ -42,10 +57,22 @@ export default ({ data }) => {
 
 export const query = graphql`
   query MyQuery {
+    site {
+      siteMetadata {
+        profile
+        title
+        author
+        introduction
+        planTitle
+        showPlan
+      }
+    }
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           id
+          excerpt(pruneLength: 200)
+          html
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
@@ -54,17 +81,7 @@ export const query = graphql`
           fields {
             slug
           }
-          excerpt(pruneLength: 200)
-          htmlAst
         }
-      }
-    }
-    site {
-      siteMetadata {
-        profile
-        title
-        author
-        introduction
       }
     }
   }

@@ -4,23 +4,23 @@ import Layout from '../components/layout';
 
 export default ({ data }) => {
   const title = data.site.siteMetadata.title
+  const about = data.markdownRemark.html
 
   return (
     <Layout title={title}>
-        <h1>About CSS Modules</h1>
-        <p>CSS Modules are cool</p>
+      <div dangerouslySetInnerHTML={{ __html: about }} />
     </Layout>
   )
 }
 
-export const query = graphql`
-  query {
+export const aboutQuery = graphql`
+  query AboutQuery {
+    markdownRemark(frontmatter: {layout: {eq: "about"}}) {
+      html
+    }
     site {
       siteMetadata {
-        profile
         title
-        author
-        introduction
       }
     }
   }

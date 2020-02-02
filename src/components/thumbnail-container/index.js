@@ -5,9 +5,10 @@ import './index.scss'
 
 export const ThumbnailContainer = ({ posts, category }) => {
 
-  posts = posts.filter(({node}) =>
-            category === 'All' ? node.frontmatter.tag
-              : node.frontmatter.tag.indexOf(category) !== -1)
+  posts = posts.filter(({node}) => node.frontmatter.tag)
+               .filter(({node}) => category === 'All' 
+                  ? node.frontmatter.tag
+                  : node.frontmatter.tag.indexOf(category) !== -1)
 
   return (
     <div className='container'>
