@@ -28,6 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
             frontmatter {
               title
               tag
+              layout
             }
           }
         }
@@ -35,7 +36,8 @@ exports.createPages = async ({ graphql, actions }) => {
     } 
   `)
   
-  const posts = result.data.allMarkdownRemark.edges
+  const posts = result.data.allMarkdownRemark.edges.filter(
+    ({node}) => !node.frontmatter.layout)
 
   posts.forEach(({ node }, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node

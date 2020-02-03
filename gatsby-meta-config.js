@@ -15,12 +15,11 @@ module.exports = {
     }
   ],
   icon: `content/assets/icon.png`,
-  keywords: [`blog`],
   planTitle: `Future Action Plan`,
   showPlan: true,
   comment: {
     disqusShortName: 'passwd10', // Your disqus-short-name. check disqus.com.
     utterances: 'passwd10/gatsby-park-answer', // Your repository for archive comment
   },
-  ga: '', // Add your google analytics tranking ID
+  ga: 'UA-149433358-1', // Add your google analytics tranking ID
 }

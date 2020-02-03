@@ -79,6 +79,12 @@ module.exports = {
               icon: metaConfig.icon,
             },
           },
+          {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              trackingId: metaConfig.ga,
+            },
+          },
           `gatsby-remark-smartypants`,
           `gatsby-remark-emojis`,
         ],
@@ -90,5 +96,6 @@ module.exports = {
     `gatsby-plugin-lodash`,
     'gatsby-plugin-offline',
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
   ]
 }

@@ -7,10 +7,10 @@ import './index.scss'
 export const Layout = ({ children, title }) => (
   <>
     <Top title={title} />
-    <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
+    <div className='layout-body'>
       {children}
     </div>
-    <Footer />    
+    <Footer />
   </>
 )
 

@@ -8,13 +8,13 @@ export const PostNavigator = ({ pageContext }) => {
 
   const prevText
     = previous && (
-      previous.frontmatter.title.length > 16
+      previous.frontmatter.title.length > 15
         ? previous.frontmatter.title.substring(0, 16) + '...'
         : previous.frontmatter.title)
 
   const nextText
     = next && (
-      next.frontmatter.title.length > 16
+      next.frontmatter.title.length > 15
         ? next.frontmatter.title.substring(0, 16) + '...'
         : next.frontmatter.title)
 
