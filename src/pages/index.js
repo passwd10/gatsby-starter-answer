@@ -16,19 +16,15 @@ export default ({ data }) => {
   const { title, planTitle, showPlan } = data.site.siteMetadata
   const arr = []
   const tags = _.uniq(arr.concat(...posts.map(({ node }) => node.frontmatter.tag)))
-
-  const regExUl = /<ul>|<\/ul>/g
-  const regExDel = /(<li><del>)(.*?)(<\/del><\/li>)/g
-
   const content = posts
     .filter(({ node }) => node.frontmatter.tag)
     .filter(({ node }) => !node.frontmatter.tag.indexOf('TIL'))
-    .map(v => v.node.html
-      .split(planTitle)
-      .slice(1)[0]
-      .split(regExUl)[1]
-      .replace(regExDel, ''))
-    .join('')
+    // .map(v => v.node.html
+    //   .split(planTitle)
+    //   .slice(1)[0]
+    //   .split(regExUl)[1])
+      // .replace(regExDel, ''))
+    // .join('')
 
   const selectCategory = (tag) => {
     setCategory(tag)
@@ -38,7 +34,6 @@ export default ({ data }) => {
     <Layout>
       <Header title={title} />
       <PlanContainer
-        content={content}
         planTitle={planTitle}
         showPlan={showPlan}
       />

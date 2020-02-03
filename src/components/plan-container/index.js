@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
+import PlanItem from '../plan-item'
+
 import './index.scss'
 
-export default ({ content, planTitle, showPlan }) => {
+export default ({ planTitle, showPlan }) => {
 
   return (showPlan &&
     (<div className='check-box'>
       <Link to='/plan'>
         <span className='plan-title'>{planTitle} 📝</span>
       </Link>
-      <ul
-        className='plan-list' 
-        dangerouslySetInnerHTML={{ __html: content }}
-        />
+      <PlanItem
+        // planTitle={planTitle}
+      />
     </div>)
   )
 }

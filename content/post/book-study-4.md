@@ -26,7 +26,7 @@ tag: ['book', 'study']
   },
   "blog": "http://blog.example.com",
   "age": 34,
-  "interests: {"Web", "XML", "REST"}
+  "interests": {"Web", "XML", "REST"}
 }
 ```
 

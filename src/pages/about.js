@@ -1,7 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby'
 import Layout from '../components/layout';
-import { rhythm } from '../utils/typography'
 
 export default ({ data }) => {
   const title = data.site.siteMetadata.title

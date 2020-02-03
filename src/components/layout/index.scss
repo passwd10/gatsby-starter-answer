@@ -2,5 +2,11 @@
   margin: 3rem auto;
   max-width: 650px;
   padding: 0 1rem;
-  min-height: 100%;
+  min-height: calc(100vh - 130px - 6rem);
+}
+
+blockquote {
+  border-left: 5px rgb(160, 160, 160) solid;
+  padding-left: 15px;
+  margin-left: 0;
 }

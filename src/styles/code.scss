@@ -27,6 +27,10 @@
    -ms-hyphens: none;
    hyphens: none; 
  }
+ 
+ blockquote {
+  color: rgb(160, 160, 160);
+ }
 
  .gatsby-highlight {
   background-color: #1d1f21;
@@ -57,7 +61,7 @@
  :not(pre) > code[class*="language-"] {
    padding: .1em;
    white-space: normal;
-   background: #74a887;
+   background: #447979;
  }
  
  .token.comment,
@@ -87,7 +91,8 @@
  .token.number,
  .token.function {
    color: #f08d49;
- }
+}
+
  
  .token.property,
  .token.class-name,
@@ -209,7 +214,6 @@
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
- 
  }
  
    .line-numbers-rows > span {
