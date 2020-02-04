@@ -6,15 +6,12 @@
 
 ## Feature
 
-- Ubuntu font
-- Social Icon(fontawesome)
-- Tags
 - Emoji
-- Image zoom
-- Comment(disqus)
+- Social Icon(fontawesome)
 - Google Analytics
-- Plan
-- Resume(About)
+- Disqus
+- Resume
+- Place plan on the top
 
 ## Quck Start
 
