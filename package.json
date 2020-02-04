@@ -4,6 +4,10 @@
   "description": "Gatsby blog starter template",
   "version": "0.1.0",
   "author": "ParkAnswer[ParkInSeo]<inseo9494@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/passwd10/gatsby-starter-answer/issues"
+  },
+  "main": "n/a",
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -58,9 +62,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+    "url": "https://github.com/passwd10/gatsby-starter-answer"
   },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  "homepage": "https://github.com/passwd10/gatsby-starter-answer#readme",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ]
 }
