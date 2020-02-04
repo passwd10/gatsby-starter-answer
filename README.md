@@ -2,7 +2,7 @@
 
 ## Demo
 
-- [Default Theme](answer.netlify.com)
+- [Default Theme](https://answer.netlify.com/)
 
 ## Feature
 
