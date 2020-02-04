@@ -1,10 +1,10 @@
 module.exports = {
-  title: `Find Answer`,
-  description: `Lets find the Answer`,
+  title: `Answer.dev`, // Your blog title
+  description: `Relax and Reflect`, // Your blog description
   author: `Park Answer`,
-  introduction: `Welcome! This is the Dev Blog`,
-  siteUrl: `http://parkanswer.surge.sh/`, // Your blog site url
-  social: [
+  introduction: `Welcome! This is Answer's Dev Blog`,
+  siteUrl: `http://answer.netlify.com/`, // Your blog site url
+  social: [ //You can find and use icons on the https://fontawesome.com/icons?d=gallery&s=brands
     {
       icon: `github`,
       url: `https://github.com/passwd10`
@@ -14,12 +14,11 @@ module.exports = {
       url: `https://inseo9494@gmail.com`
     }
   ],
-  icon: `content/assets/icon.png`,
-  planTitle: `Future Action Plan`,
-  showPlan: true,
+  icon: `content/assets/icon.png`, // Your blog icon
+  planTitle: `Future Action Plan`, // Your blog planTitle
+  showPlan: true, //If you don't want to see the plan, change the status to false.
   comment: {
     disqusShortName: 'passwd10', // Your disqus-short-name. check disqus.com.
-    utterances: 'passwd10/gatsby-park-answer', // Your repository for archive comment
   },
   ga: 'UA-149433358-1', // Add your google analytics tranking ID
 }

@@ -7,16 +7,6 @@ export default () => {
   const regExUl = /<ul>|<\/ul>/g
   const regExDel = /(<li><del>)(.*?)(<\/del><\/li>)/g
 
-  // content.map(v => v.node.html
-  //   .split(planTitle)
-  //   .slice(1)[0]
-  // .split(regExUl)[1]
-  // .replace(regExLink, '<li><a href="' + v.node.fields.slug + '">')
-  // .replace(regExLinkBack, '</a></li>')
-  // .replace(regExDel, '')
-  // )
-  // .join('')
-
   return (
     <StaticQuery
       query={planQuery}

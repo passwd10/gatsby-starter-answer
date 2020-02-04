@@ -4,25 +4,28 @@
   margin: 40px 0;
   display: flex;
   flex-wrap: wrap;
-  background: #355a85;
-  border-radius: 30px;
-  max-width: 100%;
+  justify-content: space-between;
 
-  span {
+  .prev {
     display: inline-block;
-    max-width: 50%;
-    min-width: 50%;
     text-align: center;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    height: 70px;
-    line-height: 70px;
+    background: #355a85;
+    line-height: 40px;
+    border-radius: 30px;
+  }
+
+  .next {
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    background: #355a85;
+    border-radius: 30px;
   }
 
   a {
     margin: auto;
     padding: 16px 8px 16px 8px;
-    font-size: 20px;
+    font-size: 17px;
     color: #fff;
   }
 
