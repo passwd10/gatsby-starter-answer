@@ -25,7 +25,7 @@ gatsby new my-blog https://github.com/passwd10/gatsby-starter-answer
 
 ```bash
 cd my-blog
-npm start
+gatsby develop
 ```
 
 ### 3. Add post
