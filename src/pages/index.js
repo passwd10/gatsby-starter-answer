@@ -1,15 +1,15 @@
-import React, { useState } from "react"
-import { graphql } from "gatsby"
-import _ from "lodash"
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
+import _ from 'lodash'
 
-import Layout from "../components/layout"
-import Header from "../components/header"
-import ThumbnailContainer from "../components/thumbnail-container"
-import Category from "../components/category"
-import PlanContainer from "../components/plan-container"
+import Layout from '../components/layout'
+import Header from '../components/header'
+import ThumbnailContainer from '../components/thumbnail-container'
+import Category from '../components/category'
+import PlanContainer from '../components/plan-container'
 
 export default ({ data }) => {
-  const initialCategory = "All"
+  const initialCategory = 'All'
   const [category, setCategory] = useState(initialCategory)
 
   const posts = data.allMarkdownRemark.edges

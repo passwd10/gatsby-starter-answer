@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 
-import PlanItem from "../plan-item"
+import PlanItem from '../plan-item'
 
-import "./index.scss"
+import './index.scss'
 
 export default ({ planTitle, showPlan }) => {
   return (

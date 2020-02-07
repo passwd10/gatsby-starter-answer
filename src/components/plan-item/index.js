@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import React from 'react'
+import { graphql, StaticQuery } from 'gatsby'
 
-import "./index.scss"
+import './index.scss'
 
 export default () => {
   const regExUl = /<ul>|<\/ul>/g
@@ -13,7 +13,7 @@ export default () => {
       render={data => {
         const plan = data.markdownRemark.html
           .split(regExUl)[1]
-          .replace(regExDel, "")
+          .replace(regExDel, '')
 
         return (
           <ul

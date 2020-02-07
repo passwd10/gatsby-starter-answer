@@ -1,13 +1,13 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 
-import "./index.scss"
+import './index.scss'
 
 export const ThumbnailContainer = ({ posts, category }) => {
   posts = posts
     .filter(({ node }) => node.frontmatter.tag)
     .filter(({ node }) =>
-      category === "All"
+      category === 'All'
         ? node.frontmatter.tag
         : node.frontmatter.tag.indexOf(category) !== -1
     )
@@ -23,7 +23,7 @@ export const ThumbnailContainer = ({ posts, category }) => {
           <p className="excerpt">{node.excerpt}</p>
           <span className="postDate">{node.frontmatter.date}</span>
           <span className="postTag">
-            {node.frontmatter.tag.map(v => " #" + v)}
+            {node.frontmatter.tag.map(v => ' #' + v)}
           </span>
         </div>
       ))}

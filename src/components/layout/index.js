@@ -1,8 +1,8 @@
-import React from "react"
-import Top from "../top"
-import Footer from "../footer"
+import React from 'react'
+import Top from '../top'
+import Footer from '../footer'
 
-import "./index.scss"
+import './index.scss'
 
 export const Layout = ({ children, title }) => (
   <>

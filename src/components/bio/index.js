@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql, StaticQuery, Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { library, config } from "@fortawesome/fontawesome-svg-core"
-import { faUser } from "@fortawesome/free-solid-svg-icons"
-import { fab } from "@fortawesome/free-brands-svg-icons"
-import Image from "gatsby-image"
+import React from 'react'
+import { graphql, StaticQuery, Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import Image from 'gatsby-image'
 
-import "./index.scss"
+import './index.scss'
 
 export const Bio = () => {
   config.autoAddCss = false
@@ -35,8 +35,8 @@ export const Bio = () => {
                 <a href={v.url} key={index}>
                   <FontAwesomeIcon
                     key={index}
-                    icon={["fab", v.icon]}
-                    style={{ width: "23px", marginRight: "10px" }}
+                    icon={['fab', v.icon]}
+                    style={{ width: '23px', marginRight: '10px' }}
                     fixedWidth
                     className="icon"
                   />
