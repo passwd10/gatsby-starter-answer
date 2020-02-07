@@ -1,13 +1,13 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import Layout from '../components/layout'
-import Bio from '../components/bio'
-import DisqusTemplate from '../components/DisqusTemplate'
-import PostContent from '../components/post-content'
-import PostTitle from '../components/post-title'
-import PostDate from '../components/post-date'
-import Horizontal from '../components/horizontal'
-import PostNavigator from '../components/post-navigator'
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
+import Bio from "../components/bio"
+import DisqusTemplate from "../components/DisqusTemplate"
+import PostContent from "../components/post-content"
+import PostTitle from "../components/post-title"
+import PostDate from "../components/post-date"
+import Horizontal from "../components/horizontal"
+import PostNavigator from "../components/post-navigator"
 
 export default ({ data, pageContext }) => {
   const post = data.markdownRemark
@@ -17,8 +17,8 @@ export default ({ data, pageContext }) => {
 
   return (
     <Layout title={title}>
-      <PostTitle title={post.frontmatter.title}/>
-      <PostDate date={post.frontmatter.date}/>
+      <PostTitle title={post.frontmatter.title} />
+      <PostDate date={post.frontmatter.date} />
       <PostContent post={post.html} />
       <Horizontal />
       <Bio />

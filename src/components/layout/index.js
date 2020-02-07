@@ -1,17 +1,15 @@
-import React from 'react'
-import Top from '../top'
-import Footer from '../footer'
+import React from "react"
+import Top from "../top"
+import Footer from "../footer"
 
-import './index.scss'
+import "./index.scss"
 
 export const Layout = ({ children, title }) => (
   <>
     <Top title={title} />
-    <div className='layout-body'>
-      {children}
-    </div>
+    <div className="layout-body">{children}</div>
     <Footer />
   </>
 )
 
-export default Layout;
+export default Layout

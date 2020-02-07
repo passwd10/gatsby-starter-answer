@@ -1,6 +1,6 @@
-import React from 'react';
-import { graphql } from 'gatsby'
-import Layout from '../components/layout';
+import React from "react"
+import { graphql } from "gatsby"
+import Layout from "../components/layout"
 
 export default ({ data }) => {
   const html = data.markdownRemark.html
@@ -15,7 +15,7 @@ export default ({ data }) => {
 
 export const planQuery = graphql`
   query PlanQuery {
-    markdownRemark(frontmatter: {layout: {eq: "plan"}}) {
+    markdownRemark(frontmatter: { layout: { eq: "plan" } }) {
       html
     }
     site {

@@ -1,7 +1,7 @@
 ---
 title: "Quick Start"
 date: 2020-01-27
-tag: ['post']
+tag: ["post"]
 ---
 
 ## Quck Start

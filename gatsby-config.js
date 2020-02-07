@@ -1,4 +1,4 @@
-const metaConfig = require('./gatsby-meta-config')
+const metaConfig = require("./gatsby-meta-config")
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -40,8 +40,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `passwd10`
-      }
+        shortname: `passwd10`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -50,7 +50,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              inlineCodeMarker: '%',
+              inlineCodeMarker: "%",
               showLineNumbers: true,
             },
           },
@@ -101,8 +101,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
-    'gatsby-plugin-offline',
+    "gatsby-plugin-offline",
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
-  ]
+  ],
 }

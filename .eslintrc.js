@@ -3,13 +3,13 @@ module.exports = {
     browser: true,
     es6: true,
   },
-  plugins: ['react'],
+  plugins: ["react"],
   globals: {
     graphql: false,
   },
   parserOptions: {
     ecmaVersion: 2017,
-    sourceType: 'module',
+    sourceType: "module",
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
       jsx: true,

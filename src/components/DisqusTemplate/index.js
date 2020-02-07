@@ -1,16 +1,14 @@
-import React from 'react'
-import { Disqus } from 'gatsby-plugin-disqus'
+import React from "react"
+import { Disqus } from "gatsby-plugin-disqus"
 
-const DisqusTemplate = ({siteUrl, slug, identifier, title}) => {
+const DisqusTemplate = ({ siteUrl, slug, identifier, title }) => {
   let disqusConfig = {
-    url: siteUrl+slug,
+    url: siteUrl + slug,
     identifier: identifier,
     title: title,
   }
 
-  return (
-      <Disqus config={disqusConfig} />
-  )
+  return <Disqus config={disqusConfig} />
 }
 
 export default DisqusTemplate

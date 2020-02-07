@@ -8,7 +8,7 @@ githubTheme.overrideStyles = () => {
       fontFamily: `Ubuntu`,
     },
 
-    'a:hover': {
+    "a:hover": {
       textDecoration: `none`,
     },
 
@@ -22,20 +22,20 @@ githubTheme.overrideStyles = () => {
       fontFamily: `Ubuntu`,
       fontWeight: 600,
       fontSize: `30px`,
-      marginTop: '30px',
-      marginBottom: '20px',
+      marginTop: "30px",
+      marginBottom: "20px",
     },
 
     h3: {
       fontFamily: `Ubuntu`,
-      marginTop: '30px',
-      marginBottom: '20px',
+      marginTop: "30px",
+      marginBottom: "20px",
     },
 
     h4: {
       fontFamily: `Ubuntu`,
-      marginTop: '10px',
-      marginBottom: '10px',
+      marginTop: "10px",
+      marginBottom: "10px",
     },
 
     p: {
@@ -56,14 +56,12 @@ githubTheme.overrideStyles = () => {
       fontFamily: `Ubuntu`,
     },
     ul: {
-      marginBottom: '6px',
+      marginBottom: "6px",
     },
 
     li: {
-      marginBottom: '2px',
+      marginBottom: "2px",
     },
-
-    
   }
 }
 
