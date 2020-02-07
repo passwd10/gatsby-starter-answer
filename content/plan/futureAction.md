@@ -7,7 +7,7 @@ layout: plan
 ## Future Action Plan 🤔💡
 
 - Every morning, solve the algorithm problem
-- Read book 50 pages every day
+- Read 50 pages every day
 
 ## Feedback 📝
 
