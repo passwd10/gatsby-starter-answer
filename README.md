@@ -1,6 +1,6 @@
 # gatsby-starter-answer
 
-![Default Theme](default-theme.png)
+![Default Theme](default-theme-screen-shot.png)
 
 ## 🌱 Demo
 
