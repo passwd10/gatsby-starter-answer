@@ -1,10 +1,12 @@
 # gatsby-starter-answer
 
-## Demo
+![Default Theme](default-theme.png)
+
+## 🌱 Demo
 
 - [Default Theme](https://answer.netlify.com/)
 
-## Feature
+## 📋 Feature
 
 - Emoji
 - Social Icon(fontawesome)
@@ -13,7 +15,7 @@
 - Resume
 - Place plan on the top
 
-## Quck Start
+## 🚀 Quck Start
 
 ### 1. Install blog theme
 
@@ -36,4 +38,4 @@ gatsby develop
 
 ### 4. Set Blog
 
-- You can set blog in the `gatsby-meta-config.js`file.
+- You can set blog in the `gatsby-meta-config.js` file.
