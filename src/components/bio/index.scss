@@ -3,13 +3,12 @@
 .user {
   display: flex;
   align-items: center;
-  margin: 0 auto 12px auto;
+  margin: 20px auto 12px auto;
 }
 
 .user:last-child {
   margin-bottom: 0;
 }
-
 
 .description {
   flex: 1;
@@ -23,7 +22,8 @@
     padding: 0;
     color: $main-color;
     opacity: 0.7;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 20px;
     letter-spacing: -0.5px;
   }
 

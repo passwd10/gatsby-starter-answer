@@ -7,7 +7,7 @@ export const Top = ({ title }) => {
   return (
     <div className="top">
       <Link to={`/`} className="link">
-        <h1 className="title">{title}</h1>
+        <span className="title">{title}</span>
       </Link>
     </div>
   )

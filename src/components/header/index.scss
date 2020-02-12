@@ -2,7 +2,14 @@
 
 .blog-title {
   background-color: transparent;
-  margin-bottom: 30px;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: $main-color;
+}
+
+.blog-title:hover {
+  color: $link-hover-color
 }
 
 .title-link {

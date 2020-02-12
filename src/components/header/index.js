@@ -8,11 +8,11 @@ import './index.scss'
 export const Header = ({ title }) => {
   return (
     <div className="header">
-      <h1 className="blog-title">
-        <Link to="/" className="title-link">
+        <Link to="/about" className="title-link">
+        <span className="blog-title">
           {title}
+          </span>
         </Link>
-      </h1>
       <Bio />
     </div>
   )

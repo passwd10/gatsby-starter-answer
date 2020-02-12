@@ -6,4 +6,4 @@ layout: about
 
 ## About Me
 
-_Thank you for reading my resume. If you want to contact me, Please send me an email._
+Thanks for visiting my blog. I'm Answer😀
