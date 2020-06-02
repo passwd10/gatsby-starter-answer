@@ -36,13 +36,46 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
+  const getPostsByTag = (posts, tag) => {
+    return posts.filter(({ node }) => node.frontmatter.tag.includes(tag));
+  };
+
+  const sortPostsByDate = (posts) => {
+    posts.sort((a, b) => {
+      const targetPostDate = a.node.fields.slug.split("/").join("");
+      const nextPostDate = b.node.fields.slug.split("/").join("");
+      
+      return `${targetPostDate}`+`${nextPostDate}` < `${nextPostDate}`+`${targetPostDate}` ? -1 : 1;
+    });
+  };
+
+  const findIndexByTitle = (posts, title) => {
+    return posts.findIndex(({ node }) => node.frontmatter.title == title);
+  }
+
   const posts = result.data.allMarkdownRemark.edges.filter(
     ({ node }) => !node.frontmatter.layout
   )
 
   posts.forEach(({ node }, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
+    const currentNode = posts[index].node;
+    const currentNodesTag = currentNode.frontmatter.tag[0];
+
+    const postsMatchingCurrentTag = getPostsByTag(posts, currentNodesTag);
+    sortPostsByDate(postsMatchingCurrentTag);
+
+    const currentNodesTitle = currentNode.frontmatter.title;
+    const indexInTagGroup = findIndexByTitle(postsMatchingCurrentTag, currentNodesTitle);
+
+    const previousNodeByTag = postsMatchingCurrentTag[indexInTagGroup - 1]
+      ? postsMatchingCurrentTag[indexInTagGroup - 1]
+      : postsMatchingCurrentTag[postsMatchingCurrentTag.length - 1];
+    const nextNodeByTag = postsMatchingCurrentTag[indexInTagGroup + 1]
+      ? postsMatchingCurrentTag[indexInTagGroup + 1]
+      : postsMatchingCurrentTag[0];
+
+    const previous = index === posts.length - 1 ? null : previousNodeByTag.node;
+    const next = index === 0 ? null : nextNodeByTag.node;
 
     createPage({
       path: node.fields.slug,
@@ -53,5 +86,5 @@ exports.createPages = async ({ graphql, actions }) => {
         next,
       },
     })
-  })
+  });
 }
