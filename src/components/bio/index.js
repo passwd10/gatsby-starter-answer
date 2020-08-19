@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
+import { far } from '@fortawesome/free-regular-svg-icons'
 import Image from 'gatsby-image'
 
 import './index.scss'
@@ -11,7 +12,7 @@ import './index.scss'
 export const Bio = () => {
   config.autoAddCss = false
 
-  library.add(faUser, fab)
+  library.add(faUser, fab, far)
   return (
     <StaticQuery
       query={bioQuery}
@@ -33,6 +34,13 @@ export const Bio = () => {
               <p className="intro">{introduction}</p>
               {social.map((v, index) => (
                 <a href={v.url} key={index}>
+                  <FontAwesomeIcon
+                    key={index}
+                    icon={['far', v.icon]}
+                    style={{ width: '23px', marginRight: '10px' }}
+                    fixedWidth
+                    className='icon'
+                  />
                   <FontAwesomeIcon
                     key={index}
                     icon={['fab', v.icon]}

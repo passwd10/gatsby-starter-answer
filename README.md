@@ -4,7 +4,7 @@
 
 ## 🌱 Demo
 
-- [Default Theme](https://answer.netlify.com/)
+- [Default Theme](https://answer.netlify.app/)
 
 ## 📋 Feature
 

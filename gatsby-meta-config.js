@@ -3,7 +3,7 @@ module.exports = {
   description: `Relax and Reflect`, // Your blog description
   author: `Park Answer`,
   introduction: `Welcome! This is Answer's Dev Blog`,
-  siteUrl: `http://answer.netlify.com/`, // Your blog site url
+  siteUrl: `http://answer.netlify.app/`, // Your blog site url
   social: [
     //You can find and use icons on the https://fontawesome.com/icons?d=gallery&s=brands
     {
@@ -14,6 +14,10 @@ module.exports = {
       icon: `google`,
       url: `https://inseo9494@gmail.com`,
     },
+    {
+      icon: `smile`,
+      url: `https://answer.netlify.app/about`
+    }
   ],
   icon: `content/assets/icon.png`, // Your blog icon
   planTitle: `Future Action Plan`, // Your blog planTitle
